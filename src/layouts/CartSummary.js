@@ -11,7 +11,7 @@ export default function CartSummary() {
       <Dropdown item text="Sepetiniz">
         <Dropdown.Menu>
           {cartItems.map((cartItem) => (
-            <Dropdown.Item>
+            <Dropdown.Item key={cartItem.product.id}>
               {cartItem.product.productName}
               <Label>{cartItem.quantity}</Label>
             </Dropdown.Item>
