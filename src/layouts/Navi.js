@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import CartSummary from "./CartSummary";
 import { Menu, Container } from "semantic-ui-react";
-import SignedIn from "./SignedIn";
-import SignedOut from "./SignedOut";
+import SignedIn from "../components/SignedIn";
+import SignedOut from "../components/SignedOut";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 export default function Navi() {

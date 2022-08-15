@@ -11,4 +11,19 @@ export default class ProductService {
         productName
     );
   }
+  addProduct(
+    categoryId,
+    discontinued,
+    productName,
+    quantityPerUnit,
+    reorderLevel,
+    supplierId,
+    unitPrice,
+    unitsInStock,
+    unitsOnOrder
+  ) {
+    return axios.post(
+      `http://localhost:8083/api/products/add?category.categoryId=${categoryId}&discontinued=${discontinued}&productName=${productName}&quantityPerUnit=${quantityPerUnit}&reorderLevel=${reorderLevel}&supplierId=${supplierId}&unitPrice=${unitPrice}&unitsInStock=${unitsInStock}&unitsOnOrder=${unitsOnOrder}`
+    );
+  }
 }
